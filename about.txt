@@ -1,0 +1,26 @@
+The client wishes to be able to provide any valid date and get the corresponding day.
+Create a new method called  string Calendar::getDay(Date d) {}
+The client wishes to be able to set a particular date as a holiday. The client expects all Saturdays and Sundays to be set as holidays by default.
+Create a new method called void Calendar::addHoliday(Date d) {}
+The client wishes to perform addition and subtraction operators to be enabled for the dates. Specifically, the client wishes to be able to add a date with an integer to obtain a valid date that comes the specified integer number of days post the supplied date.
+Create a new method called Date Calendar::iterateDates(Date d, int t) {}
+Shift from Date d by t days. Then return the date.
+The client wishes to know the number of holidays in a given month of a specified year.
+Create a new method called int Calendar::getNumberOfHolidays(int month, int year);
+The client wishes to know if a date preceded a different date. Example (23/08/2023 < 22/08/2023) is true but (23/08/2023 < 24/08/2023) is false.
+Create a new method called bool Calendar::isPreceded(Date d1, Date d2); Return true if d1 < d2 else false.
+The client wishes to add a note to a given date. For instance the client might want to add a note  “Meeting with Alan Turing” to the date 23/08/2023.
+Create a new method called void Calendar::addNoteToDate(Date d, string note);
+The client wishes to be able to remove a note that was added to a date.
+Create a new method called bool Calendar::removeNoteFromDate(Date d); Return true if successfully deleted, otherwise false, if there is no note stored for that date.
+The client wishes to display all notes for the next n days of a given date for a given n.
+Create a new Data Structure Called Notes. Notes should have two member variables, string content, and Date date.
+Create a new method called std::vector<Notes> Calendar::getNotesFromDateTillN(Date d, int n);
+The client wishes to be able to compute the number of days between any two valid dates.
+Create a new method called int Calendar::getDistanceBetweenDates(Date d1, Date d2);
+The client wishes to print the calendar for any given month of a specified year.
+Create a new method called void Calendar::printMonthOfYear(int month, int year); Should print (instead of returning anything) all the dates line by line, each line should have one week aligned by sunday.
+The client wishes to check if two given users, who have their own meetings noted in their respective calendars, have any set of common days in a given month of an year where they are free to schedule a meeting and if so list the dates (of course, they can’t have meetings on holidays).
+Two different users will have two different calendar objects.
+Write a global function std::vector<Date> getFreeDates(Calendar c1, Calendar c2, int month, int year);
+Should return a list of dates when these Calendars c1 and c2 do not have conflicts.
